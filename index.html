@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="tr" translate="no" class="notranslate">
+<head>
+<meta charset="UTF-8">
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PeerDrop Pro v5.2 Enterprise — 16K RAW Stream & Zero-Cloud P2P Workstation</title>
+<style>
+  :root {
+    --bg: #070b12;
+    --panel: #0f1623;
+    --card: #151f32;
+    --border: #24324a;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #10b981;
+    --blue: #38bdf8;
+    --purple: #6366f1;
+    --gold: #f59e0b;
+    --danger: #ef4444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  body { background: var(--bg); color: var(--text); line-height: 1.6; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+  /* UST NAVIGASYON */
+  .nav { padding: 18px 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(7,11,18,0.88); backdrop-filter: blur(12px); z-index: 50; }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .logo { font-size: 19px; font-weight: 900; color: var(--text); display: flex; align-items: center; gap: 9px; letter-spacing: -0.4px; }
+  .logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+  .logo span { font-size: 11px; background: rgba(56,189,248,0.14); color: var(--blue); border: 1px solid rgba(56,189,248,0.35); padding: 2px 8px; border-radius: 6px; font-weight: 700; }
+  .nav-links { display: flex; align-items: center; gap: 14px; }
+  .lang-btn { background: var(--card); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; }
+
+  /* HERO ALANI */
+  .hero { padding: 72px 0 48px; text-align: center; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(16,185,129,0.1); color: #34d399; border: 1px solid rgba(16,185,129,0.3); padding: 6px 16px; border-radius: 99px; font-size: 12.5px; font-weight: 700; margin-bottom: 22px; }
+  h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 900; letter-spacing: -1.2px; line-height: 1.12; max-width: 920px; margin: 0 auto 20px; }
+  h1 em { font-style: normal; background: linear-gradient(90deg, #10b981, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-sub { font-size: 18px; color: var(--muted); max-width: 780px; margin: 0 auto 32px; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { padding: 14px 26px; border-radius: 12px; font-size: 14.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: 0.18s; cursor: pointer; border: 1px solid transparent; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 10px 30px rgba(16,185,129,0.28); }
+  .btn-gold { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; box-shadow: 0 10px 30px rgba(245,158,11,0.22); }
+  .btn-sec { background: var(--card); color: var(--text); border-color: var(--border); }
+
+  /* CANLI HIZ SIMULATORU */
+  .sim-box { background: linear-gradient(160deg, #0f1623, #131d31); border: 1px solid #2b3d5c; border-radius: 22px; padding: 34px; margin: 30px 0 60px; box-shadow: 0 25px 60px rgba(0,0,0,0.5); }
+  .sim-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+  .sim-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 28px; }
+  .ctrl-card { background: rgba(7,11,18,0.6); border: 1px solid var(--border); padding: 18px; border-radius: 14px; }
+  .ctrl-label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+  .ctrl-val { color: var(--blue); font-family: monospace; font-size: 15px; }
+  input[type=range] { width: 100%; accent-color: var(--accent); cursor: pointer; }
+
+  .compare-bars { display: flex; flex-direction: column; gap: 16px; }
+  .bar-group { background: rgba(7,11,18,0.75); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; }
+  .bar-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 13.5px; font-weight: 700; }
+  .bar-track { width: 100%; background: #1e293b; height: 14px; border-radius: 99px; overflow: hidden; }
+  .bar-fill-pd { background: linear-gradient(90deg, #10b981, #38bdf8); height: 100%; width: 8%; border-radius: 99px; transition: width 0.25s; }
+  .bar-fill-cloud { background: linear-gradient(90deg, #ef4444, #f97316); height: 100%; width: 100%; border-radius: 99px; }
+
+  /* MIMARI VE HIZ LIMITLERI TABLOSU */
+  .sec-title { text-align: center; margin: 60px 0 30px; }
+  .sec-title h2 { font-size: 30px; font-weight: 900; margin-bottom: 8px; }
+  .sec-title p { color: var(--muted); font-size: 15px; }
+
+  .matrix-table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 60px; font-size: 13.5px; }
+  .matrix-table th { background: var(--card); color: var(--blue); text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+  .matrix-table td { padding: 13px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; }
+  .matrix-table tr:last-child td { border-bottom: none; background: rgba(16,185,129,0.08); font-weight: 700; color: #34d399; }
+
+  /* 6 KURUMSAL YETENEK KARTI */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 60px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+  .card h3 { font-size: 16.5px; margin-bottom: 8px; color: var(--text); }
+  .card p { font-size: 13.5px; color: var(--muted); }
+
+  /* 3 KADEMELI KURUMSAL FIYATLANDIRMA */
+  .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-bottom: 70px; }
+  .price-box { background: var(--panel); border: 1px solid var(--border); border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 14px; }
+  .price-box.pro { border: 2px solid var(--gold); background: linear-gradient(160deg, #0f1623, #1c1813); }
+  .price-box.ent { border: 2px solid var(--blue); background: linear-gradient(160deg, #0f1623, #0f1e2e); }
+  .amount { font-size: 36px; font-weight: 900; }
+  .amount small { font-size: 13px; color: var(--muted); font-weight: 500; }
+  ul.feat-list { list-style: none; display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; color: #cbd5e1; margin: 8px 0 16px; }
+
+  footer { text-align: center; padding: 40px 0; color: #64748b; font-size: 13px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="logo"><span class="logo-dot"></span> PeerDrop Pro <span>v5.2 ENTERPRISE</span></div>
+      <div class="nav-links">
+        <a href="#simulator" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:700" data-tr="Hız Simülatörü" data-en="Speed Simulator">Hız Simülatörü</a>
+        <a href="#matrix" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:700" data-tr="Vites Mimarisi" data-en="Gear Matrix">Vites Mimarisi</a>
+        <a href="#pricing" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:700" data-tr="Kurumsal Lisans" data-en="Enterprise Pricing">Kurumsal Lisans</a>
+        <button class="lang-btn" onclick="toggleSiteLang()" id="langToggleBtn">🇬🇧 EN / 🇹🇷 TR</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section class="hero">
+      <div class="pill" data-tr="🏢 Kurumsal Sıfır-Bulut (KVKK / GDPR) • 10 Dil • iOS & PC 16K RAW Akış" data-en="🏢 Enterprise Zero-Cloud (GDPR) • 10 Languages • iOS & PC 16K RAW Stream">🏢 Kurumsal Sıfır-Bulut (KVKK / GDPR) • 10 Dil • iOS & PC 16K RAW Akış</div>
+      <h1 data-tr=" Şirketinizdeki <em>16K Videoları ve 100GB+ Dosyaları</em> Buluta Yüklemeden Saniyeler İçinde Aktarın" data-en="Stream <em>16K RAW Videos & 100GB+ Files</em> Across Your Organization in Seconds">Şirketinizdeki <em>16K Videoları ve 100GB+ Dosyaları</em> Buluta Yüklemeden Saniyeler İçinde Aktarın</h1>
+      <p class="hero-sub" data-tr="WeTransfer veya Google Drive'a yükleyip saatlerce beklemeye son. Karşı tarafa hiçbir program kurdurmadan, 16 Mbps ADSL'den 10 Gbps Kurumsal Fiber'e otomatik vites değiştiren doğrudan P2P iş istasyonu." data-en="Stop waiting hours to upload and download from cloud storage. Zero receiver installation required—automatically shifts from 16 Mbps ADSL to 10 Gbps Enterprise Fiber.">WeTransfer veya Google Drive'a yükleyip saatlerce beklemeye son. Karşı tarafa hiçbir program kurdurmadan, 16 Mbps ADSL'den 10 Gbps Kurumsal Fiber'e otomatik vites değiştiren doğrudan P2P iş istasyonu.</p>
+      <div class="cta-row">
+        <a href="./PeerDrop-v4.1-Windows-x64.zip" class="btn btn-primary" data-tr="📥 Windows Kurulum Paketi İndir (v5.2)" data-en="📥 Download Windows Setup Package (v5.2)">📥 Windows Kurulum Paketi İndir (v5.2)</a>
+        <a href="#pricing" class="btn btn-gold" data-tr="👑 Kurumsal & Pro Lisans Al" data-en="👑 Get Pro & Enterprise License">👑 Kurumsal & Pro Lisans Al</a>
+        <a href="https://github.com/barbarkaragul-oss/peerdrop" class="btn btn-sec">GitHub Vitrin →</a>
+      </div>
+    </section>
+
+    <!-- CANLI HIZ VE TASARRUF SIMULATORU -->
+    <section id="simulator" class="sim-box">
+      <div class="sim-head">
+        <div>
+          <h2 style="font-size:22px;font-weight:900;color:#fff" data-tr="⚡ Canlı Kurumsal Hız & İş Gücü Tasarruf Simülatörü" data-en="⚡ Live Enterprise Speed & Time-Saving Simulator">⚡ Canlı Kurumsal Hız & İş Gücü Tasarruf Simülatörü</h2>
+          <p style="font-size:13px;color:var(--muted)" data-tr="Dosya boyutunu ve şirketinizin internet/ağ hızını seçerek bulut servisleriyle PeerDrop v5.2 arasındaki farkı test edin." data-en="Adjust file size and network speed to compare cloud upload+download time against PeerDrop v5.2 direct P2P streaming.">Dosya boyutunu ve şirketinizin internet/ağ hızını seçerek bulut servisleriyle PeerDrop v5.2 arasındaki farkı test edin.</p>
+        </div>
+        <div id="simGearBadge" style="background:rgba(16,185,129,0.15);border:1px solid #10b981;color:#34d399;padding:6px 12px;border-radius:8px;font-family:monospace;font-size:12.5px;font-weight:800">Aktif Vites: 16MB 16K-Studio</div>
+      </div>
+
+      <div class="sim-controls">
+        <div class="ctrl-card">
+          <div class="ctrl-label">
+            <span data-tr="📦 Aktarılacak Dosya / 16K Video Boyutu:" data-en="📦 File / 16K Footage Size:">📦 Aktarılacak Dosya / 16K Video Boyutu:</span>
+            <span class="ctrl-val" id="sizeValLabel">10 GB</span>
+          </div>
+          <input type="range" id="sizeSlider" min="1" max="200" value="10" oninput="updateSimulator()">
+        </div>
+
+        <div class="ctrl-card">
+          <div class="ctrl-label">
+            <span data-tr="🚀 Şirket / Ofis Bağlantı Hızı:" data-en="🚀 Office / Network Link Speed:">🚀 Şirket / Ofis Bağlantı Hızı:</span>
+            <span class="ctrl-val" id="speedValLabel">1000 Mbps (Gigabit)</span>
+          </div>
+          <input type="range" id="speedSlider" min="1" max="4" value="3" step="1" oninput="updateSimulator()">
+        </div>
+      </div>
+
+      <div class="compare-bars">
+        <div class="bar-group" style="border-color:rgba(16,185,129,0.4)">
+          <div class="bar-top">
+            <span style="color:#34d399">⚡ PeerDrop Pro v5.2 (Zero-Copy P2P + 16K Canlı Akış)</span>
+            <span id="pdTimeLabel" style="color:#34d399;font-family:monospace;font-size:16px">~82 Saniye (Videolar İçin 0 Sn Bekleme!)</span>
+          </div>
+          <div class="bar-track"><div id="pdBarFill" class="bar-fill-pd"></div></div>
+        </div>
+
+        <div class="bar-group">
+          <div class="bar-top">
+            <span style="color:#fca5a5" data-tr="☁️ Klasik Bulut / WeTransfer (Önce Buluta Yükle + Sonra İndir + Boyut Limiti)" data-en="☁️ Traditional Cloud / WeTransfer (Upload to Cloud + Download + Size Limits)">☁️ Klasik Bulut / WeTransfer (Önce Buluta Yükle + Sonra İndir + Boyut Limiti)</span>
+            <span id="cloudTimeLabel" style="color:#fca5a5;font-family:monospace;font-size:15px">~28 Dakika</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill-cloud"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTOMATIK VITES VE HIZ LIMITLERI TABLOSU -->
+    <div id="matrix" class="sec-title">
+      <h2 data-tr="⚙️ Otomatik Vites (Adaptive Pacing) & Hız Limitleri Kılavuzu" data-en="⚙️ Adaptive Pacing Engine & Speed Limits Matrix">⚙️ Otomatik Vites (Adaptive Pacing) & Hız Limitleri Kılavuzu</h2>
+      <p data-tr="PeerDrop v5.2, hattın gücünü her saniye ölçerek tüneli koparmadan 64 KB ile 16 MB arasında vites değiştirir." data-en="PeerDrop v5.2 measures link throughput on every chunk, shifting gears from 64 KB to 16 MB without dropping tunnels.">PeerDrop v5.2, hattın gücünü her saniye ölçerek tüneli koparmadan 64 KB ile 16 MB arasında vites değiştirir.</p>
+    </div>
+
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th data-tr="Ağ / Hat Türü" data-en="Network Tier">Ağ / Hat Türü</th>
+          <th data-tr="Otomatik Vites (Parça Boyutu)" data-en="Auto-Gear (Chunk Size)">Otomatik Vites (Parça Boyutu)</th>
+          <th data-tr="Gerçek Veri Akış Hızı" data-en="Real Throughput">Gerçek Veri Akış Hızı</th>
+          <th data-tr="En Uygun Kullanım" data-en="Best Use Case">En Uygun Kullanım</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>📡 16–24 Mbps ADSL / Zayıf 4.5G</td>
+          <td><code>64 KB Safe Mode (45ms Pacing)</code></td>
+          <td>1.5 – 3 MB/sn</td>
+          <td>Saha personeli, mobil poliçe/belge ve kopmayan uzaktan aktarım</td>
+        </tr>
+        <tr>
+          <td>🌐 50–100 Mbps VDSL / 5G Mobil</td>
+          <td><code>512 KB VDSL Gear (15ms Pacing)</code></td>
+          <td>8 – 15 MB/sn</td>
+          <td>Şubeler arası ZIP arşivleri, yüksek çözünürlüklü fotoğraflar</td>
+        </tr>
+        <tr>
+          <td>⚡ 200–500 Mbps Kurumsal Fiber</td>
+          <td><code>2 MB – 4 MB Turbo Gear</code></td>
+          <td>30 – 60 MB/sn</td>
+          <td>4K/8K kurgu videoları, 3D Blender/CAD/PSD proje paketleri</td>
+        </tr>
+        <tr>
+          <td>🚀 1000 Mbps Gigabit & 10GbE LAN</td>
+          <td><code>16 MB Extreme 16K-Studio</code></td>
+          <td>115 – 125+ MB/sn (2–3 Sn!)</td>
+          <td>16K RAW Sinema (.BRAW/.R3D), 360° VR ve 100GB+ tam disk eşitleme</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 6 KURUMSAL YETENEK -->
+    <div class="grid">
+      <div class="card">
+        <h3 data-tr="🎬 8K / 16K RAW İndirmeden Sinema Akışı" data-en="🎬 8K / 16K RAW Instant Cinema Stream">🎬 8K / 16K RAW İndirmeden Sinema Akışı</h3>
+        <p data-tr="HTTP 206 Byte-Range motoru sayesinde 50 GB'lık bir videoyu bilgisayara veya iPhone'a hiç indirmeden 0. saniyede oynatın ve istediğiniz dakikaya sarın." data-en="Stream 50GB+ videos on PC and iPhone Safari instantly via HTTP 206 byte-range requests without waiting for downloads.">HTTP 206 Byte-Range motoru sayesinde 50 GB'lık bir videoyu bilgisayara veya iPhone'a hiç indirmeden 0. saniyede oynatın ve istediğiniz dakikaya sarın.</p>
+      </div>
+      <div class="card">
+        <h3 data-tr="🛡️ Microsoft Defender + Derin ZIP/EXE Kalkanı" data-en="🛡️ Microsoft Defender + Deep ZIP/EXE Shield">🛡️ Microsoft Defender + Derin ZIP/EXE Kalkanı</h3>
+        <p data-tr="ZIP arşivlerinin içini diske çıkartmadan tarar; gizli .exe/.bat tuzaklarını yakalar ve yerel Microsoft Defender motoruyla dosyayı buluta yüklemeden denetler." data-en="Inspects ZIP archives without extracting, catches disguised .exe traps, and scans files locally via Microsoft Defender.">ZIP arşivlerinin içini diske çıkartmadan tarar; gizli .exe/.bat tuzaklarını yakalar ve yerel Microsoft Defender motoruyla dosyayı buluta yüklemeden denetler.</p>
+      </div>
+      <div class="card">
+        <h3 data-tr="📕 PDF Poliçe & Belgeleri İndirmeden Oku" data-en="📕 Inline PDF & Document Inspector">📕 PDF Poliçe & Belgeleri İndirmeden Oku</h3>
+        <p data-tr="Sigorta poliçeleri, sözleşmeler (.pdf), kod ve log dosyaları sohbet penceresinin içindeki yerleşik okuyucuda tek tıkla açılır." data-en="Read insurance policies, contracts (.pdf), source code and logs directly inside the built-in studio viewer.">Sigorta poliçeleri, sözleşmeler (.pdf), kod ve log dosyaları sohbet penceresinin içindeki yerleşik okuyucuda tek tıkla açılır.</p>
+      </div>
+    </div>
+
+    <!-- 3 KADEMELI LISANS TABLOSU -->
+    <div id="pricing" class="sec-title">
+      <h2 data-tr="👑 Bireysel ve Kurumsal Lisans Paketleri" data-en="👑 Pro Studio & Enterprise Licensing">👑 Bireysel ve Kurumsal Lisans Paketleri</h2>
+      <p data-tr="Aylık abonelik yok. Tek seferlik ödemeyle ömür boyu Ed25519 kriptografik lisans anahtarı." data-en="No monthly subscriptions. One-time payment for a lifetime offline Ed25519 cryptographic license key.">Aylık abonelik yok. Tek seferlik ödemeyle ömür boyu Ed25519 kriptografik lisans anahtarı.</p>
+    </div>
+
+    <section class="pricing">
+      <div class="price-box">
+        <h3>PeerDrop Core</h3>
+        <div class="amount">$0 <small>/ ücretsiz</small></div>
+        <ul class="feat-list">
+          <li>✔ Sınırsız 100GB+ P2P Dosya & 16K Video Aktarımı</li>
+          <li>✔ İndirmeden 8K/16K Video ve PDF Okuma</li>
+          <li>✔ Yerleşik ZIP Güvenlik & Microsoft Defender Taraması</li>
+          <li>✔ 10 Dil (TR, EN, AR, ZH, JA, HI, DE, RU, ES, FR)</li>
+        </ul>
+        <a href="./PeerDrop-v4.1-Windows-x64.zip" class="btn btn-sec" style="justify-content:center;margin-top:auto">Ücretsiz İndir</a>
+      </div>
+
+      <div class="price-box pro">
+        <h3 style="color:#fbbf24">👑 PeerDrop Pro Studio</h3>
+        <div class="amount">$14.99 <small>/ ömür boyu (1 PC)</small></div>
+        <ul class="feat-list">
+          <li>✔ <b>Core Sürümdeki Tüm Özellikler +</b></li>
+          <li>✔ <b>Pro Canlı Klasör Eşitleme (Zero-Copy Disk Stream)</b></li>
+          <li>✔ <b>Bağlı Cihazlara Otomatik İndirme (Auto-Pull)</b></li>
+          <li>✔ <b>Çevrimdışı Çalışan Ed25519 Kriptografik Lisans</b></li>
+        </ul>
+        <a href="https://github.com/barbarkaragul-oss/peerdrop/issues/new?title=PeerDrop+Pro+Studio+License+Order" class="btn btn-gold" style="justify-content:center;margin-top:auto">👑 Pro Lisans Satın Al</a>
+      </div>
+
+      <div class="price-box ent">
+        <h3 style="color:#38bdf8">🏢 Enterprise Site License</h3>
+        <div class="amount">$149 <small>/ şirket içi çoklu lisans</small></div>
+        <ul class="feat-list">
+          <li>✔ <b>Şirket İçi 25 Bilgisayara Kadar Pro Kurulum</b></li>
+          <li>✔ <b>%100 KVKK / GDPR Sıfır-Bulut Kurumsal Mimari</b></li>
+          <li>✔ <b>Tek Tıkla Kurulum Sihirbazı (Masaüstü Kısayollu)</b></li>
+          <li>✔ <b>Öncelikli Kurumsal Teknik Destek & Özel Markalama</b></li>
+        </ul>
+        <a href="https://github.com/barbarkaragul-oss/peerdrop/issues/new?title=PeerDrop+Enterprise+Corporate+License+Inquiry" class="btn btn-primary" style="justify-content:center;margin-top:auto;background:#0284c7">🏢 Kurumsal Teklif / Lisans Al</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Engineered by <b>Barbaros Karagülmez (@barbarkaragul-oss)</b> • PeerDrop Pro v5.2 Enterprise 16K Workstation
+  </footer>
+
+<script>
+let siteLang = 'tr';
+function toggleSiteLang() {
+  siteLang = (siteLang === 'tr') ? 'en' : 'tr';
+  document.querySelectorAll('[data-tr]').forEach(el => {
+    el.innerHTML = el.getAttribute('data-' + siteLang);
+  });
+  updateSimulator();
+}
+
+function updateSimulator() {
+  const sizeGB = parseInt(document.getElementById('sizeSlider').value, 10);
+  const speedTier = parseInt(document.getElementById('speedSlider').value, 10);
+  document.getElementById('sizeValLabel').innerText = sizeGB + ' GB';
+
+  const tiers = {
+    1: { name: '24 Mbps ADSL / 4.5G', mbps: 24, gear: '64KB Safe Mode', barWidth: '35%' },
+    2: { name: '100 Mbps VDSL / 5G', mbps: 100, gear: '2MB Fiber Gear', barWidth: '22%' },
+    3: { name: '1000 Mbps Gigabit Fiber', mbps: 1000, gear: '16MB 16K-Studio', barWidth: '8%' },
+    4: { name: '10 Gbps Kurumsal LAN', mbps: 10000, gear: '16MB Extreme LAN', barWidth: '3%' }
+  };
+
+  const current = tiers[speedTier];
+  document.getElementById('speedValLabel').innerText = current.name;
+  document.getElementById('simGearBadge').innerText = (siteLang === 'tr' ? 'Aktif Vites: ' : 'Active Gear: ') + current.gear;
+  document.getElementById('pdBarFill').style.width = current.barWidth;
+
+  const sizeMB = sizeGB * 1024;
+  const realSpeedMBps = (current.mbps / 8) * 0.92;
+  const pdSeconds = Math.max(1, Math.round(sizeMB / realSpeedMBps));
+
+  // Bulut (WeTransfer/Drive) darbogazi: Hem yukleme hem indirme + sunucu hiz limiti
+  const cloudEffectiveMBps = Math.min(realSpeedMBps * 0.35, 18);
+  const cloudSeconds = Math.round((sizeMB * 2) / cloudEffectiveMBps);
+
+  const fmtTime = (sec) => {
+    if (sec < 60) return sec + (siteLang === 'tr' ? ' Saniye' : ' Seconds');
+    const min = Math.round(sec / 60);
+    if (min < 60) return min + (siteLang === 'tr' ? ' Dakika' : ' Minutes');
+    return (min / 60).toFixed(1) + (siteLang === 'tr' ? ' Saat' : ' Hours');
+  };
+
+  document.getElementById('pdTimeLabel').innerText =
+    fmtTime(pdSeconds) + (siteLang === 'tr' ? ' (Canlı İzleme: 0 Sn!)' : ' (Live Stream: 0s Wait!)');
+  document.getElementById('cloudTimeLabel').innerText =
+    fmtTime(cloudSeconds) + (sizeGB > 2 ? (siteLang === 'tr' ? ' (Ücretsiz Bulutta Limit Aşımı!)' : ' (Exceeds Free Cloud Limit!)') : '');
+}
+updateSimulator();
+</script>
+</body>
+</html>
