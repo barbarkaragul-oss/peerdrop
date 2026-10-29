@@ -1,16 +1,16 @@
 <div align="center">
 
-# ⚡ PeerDrop Pro v4.1 — Universal Adaptive P2P Stream Engine
+# ⚡ PeerDrop Pro v4.2 — Universal Adaptive P2P Stream Engine
 ### **Uncompressed 4K/8K Video & 100GB+ File Transfer • WhatsApp-Style P2P Chat Room • Mobile Quota Shield**
 
-[![Release](https://img.shields.io/badge/Release-v4.1_Universal-00a884?style=for-the-badge)](./PeerDrop-v4.1-Windows-x64.zip)
+[![Release](https://img.shields.io/badge/Release-v4.2_Universal-00a884?style=for-the-badge)](./PeerDrop-v4.2-Windows-x64.zip)
 [![Adaptive Engine](https://img.shields.io/badge/Adaptive_Pacing-16_Mbps_ADSL_%E2%86%94_1000_Mbps_Fiber-f59e0b?style=for-the-badge)](#2-universal-adaptive-gear-engine-bbr-style-anti-bufferbloat)
 [![Security](https://img.shields.io/badge/Cryptography-SHA256_%2B_Ed25519-38bdf8?style=for-the-badge)](#6-cryptographic-security--ed25519-pro-licensing)
 [![i18n](https://img.shields.io/badge/Auto_Region_UI-EN_%7C_TR_%7C_DE_%7C_RU_%7C_ES_%7C_FR-8b5cf6?style=for-the-badge)](#5-auto-region-multi-language-engine-6-languages)
 
 **Zero Cloud Storage Cost • No Receiver App Required • Local Gigabit Wi-Fi & Global Cloudflare HTTP/2 Tunnel**
 
-[📥 **Download Windows x64 Portable (.zip)**](./PeerDrop-v4.1-Windows-x64.zip) • [🚀 **How It Works**](#1-ultra-fast-4k8k-video--100gb-streaming-architecture) • [📊 **Benchmarks & Comparison**](#-why-peerdrop-pro-competitor-comparison)
+[📥 **Download Windows x64 Portable (.zip)**](./PeerDrop-v4.2-Windows-x64.zip) • [🚀 **How It Works**](#1-ultra-fast-4k8k-video--100gb-streaming-architecture) • [📊 **Benchmarks & Comparison**](#-why-peerdrop-pro-competitor-comparison)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## 🌐 Overview
 
-**PeerDrop Pro v4.1** is a high-performance, self-hosted P2P file streaming engine and persistent WhatsApp-style chat room designed to transfer **uncompressed 4K/8K videos, raw camera footage, and 100GB+ archives** directly between PCs and smartphones (iOS / Android) with **zero cloud storage costs**.
+**PeerDrop Pro v4.2** is a high-performance, self-hosted P2P file streaming engine and persistent WhatsApp-style chat room designed to transfer **uncompressed 4K/8K videos, raw camera footage, and 100GB+ archives** directly between PCs and smartphones (iOS / Android) with **zero cloud storage costs**.
 
 **Receivers do not need to install any app or create an account.** Share a single link via WhatsApp/Telegram or scan a QR code—the recipient connects directly to your node through their mobile/desktop browser over local Gigabit LAN or a global Cloudflare HTTP/2 tunnel.
 
@@ -26,7 +26,7 @@
 
 ## 📊 Why PeerDrop Pro? (Competitor Comparison)
 
-| Feature | ⚡ **PeerDrop Pro v4.1** | **Blip** | **LocalSend** | **SendAnywhere** | **WhatsApp / Telegram** |
+| Feature | ⚡ **PeerDrop Pro v4.2** | **Blip** | **LocalSend** | **SendAnywhere** | **WhatsApp / Telegram** |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **App Required for Receiver** | **No (Works in Browser via Link/QR)** | Mandatory (App + Account) | Mandatory | No (Ad-heavy) | Mandatory |
 | **Works Across Different Networks (4G/5G / WAN)** | **Yes (Global Cloudflare HTTP/2 Tunnel)** | Yes | **No (Same Wi-Fi Only)** | Yes (Quota Limited) | Yes |
@@ -40,7 +40,7 @@
 ## 🔥 Core Engineering Features
 
 ### 1. Ultra-Fast 4K/8K Video & 100GB+ Streaming Architecture
-Standard web browsers crash when transferring multi-gigabyte videos because they attempt to buffer the entire file in RAM (`Blob`). **PeerDrop Pro v4.1** eliminates memory bottlenecks using **Direct Atomic Disk Streaming (`WriteAt` + `.part` Isolation)**:
+Standard web browsers crash when transferring multi-gigabyte videos because they attempt to buffer the entire file in RAM (`Blob`). **PeerDrop Pro v4.2** eliminates memory bottlenecks using **Direct Atomic Disk Streaming (`WriteAt` + `.part` Isolation)**:
 
 * **100% Lossless Original Quality:** Raw `.mp4`, `.mov`, and `.mkv` 4K/8K videos stream directly to disk without re-encoding or quality loss.
 * **Atomic `.part` Shield (Zero `0 KB` Corrupted Files):** Incoming streams are written to isolated `.part` files and are only promoted to the chat timeline after 100% completion and **end-to-end SHA-256 verification**.
@@ -52,7 +52,7 @@ Standard web browsers crash when transferring multi-gigabyte videos because they
 ### 2. Universal Adaptive Gear Engine (BBR-Style Anti-Bufferbloat)
 Pushing large packets over a slow connection (such as 16 Mbps ADSL with 0.8 Mbps upload, or weak 2-bar cellular 4G) floods the router's uplink buffer (**Bufferbloat**), causing tunnel disconnects (`Error 1033`) and timeouts.
 
-**PeerDrop Pro v4.1** measures per-chunk throughput in real time and dynamically adjusts both **chunk size** and **inter-packet pacing delay**:
+**PeerDrop Pro v4.2** measures per-chunk throughput in real time and dynamically adjusts both **chunk size** and **inter-packet pacing delay**:
 
 | Network Condition | Measured Instant Speed | Automatic Gear (Chunk Size) | Anti-Bufferbloat Pacing | Engineering Result |
 | :--- | :--- | :--- | :--- | :--- |
@@ -102,7 +102,7 @@ PeerDrop automatically detects the connecting device's **timezone (`Intl.DateTim
 
 ## 🛠️ Quick Start (30 Seconds)
 
-1. Download **[PeerDrop-v4.1-Windows-x64.zip](./PeerDrop-v4.1-Windows-x64.zip)** and extract it to any folder.
+1. Download **[PeerDrop-v4.2-Windows-x64.zip](./PeerDrop-v4.2-Windows-x64.zip)** and extract it to any folder.
 2. Run **`peerdrop.exe`** *(passes built-in cryptographic self-audit, starts the HTTP/2 tunnel, and opens the desktop app window)*.
 3. Click **`📱 Scan QR`** in the top bar:
    * **Same Wi-Fi Router:** Select **`📶 Local Wi-Fi (Max Speed)`** and scan with your phone.
