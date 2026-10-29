@@ -1,93 +1,92 @@
 <div align="center">
 
-# ⚡ PeerDrop Pro v4.1 — Universal Adaptive P2P Stream Room
-### **Uncompressed 4K/8K Video & 100GB+ File Transfer • WhatsApp-Style P2P Chat • Mobile Quota Shield**
+# ⚡ PeerDrop Pro v4.1 — Universal Adaptive P2P Stream Engine
+### **Uncompressed 4K/8K Video & 100GB+ File Transfer • WhatsApp-Style P2P Chat Room • Mobile Quota Shield**
 
-[![Version](https://img.shields.io/badge/Release-v4.1_Universal-00a884?style=for-the-badge)](https://github.com/barbarkaragul-oss/peerdrop/releases)
-[![Speed](https://img.shields.io/badge/Adaptive_Engine-16_Mbps_ADSL_%E2%86%94_1000_Mbps_Fiber-f59e0b?style=for-the-badge)](#%EF%B8%8F-universal-adaptive-gear-engine-bbr-style-pacing)
-[![Security](https://img.shields.io/badge/Integrity-SHA256_%2B_Ed25519-38bdf8?style=for-the-badge)](#-cryptographic-security--ed25519-pro-licensing)
-[![Languages](https://img.shields.io/badge/i18n-TR_%7C_EN_%7C_DE_%7C_RU_%7C_ES_%7C_FR-8b5cf6?style=for-the-badge)](#-auto-region-multi-language-engine-6-languages)
+[![Release](https://img.shields.io/badge/Release-v4.1_Universal-00a884?style=for-the-badge)](./PeerDrop-v4.1-Windows-x64.zip)
+[![Adaptive Engine](https://img.shields.io/badge/Adaptive_Pacing-16_Mbps_ADSL_%E2%86%94_1000_Mbps_Fiber-f59e0b?style=for-the-badge)](#2-universal-adaptive-gear-engine-bbr-style-anti-bufferbloat)
+[![Security](https://img.shields.io/badge/Cryptography-SHA256_%2B_Ed25519-38bdf8?style=for-the-badge)](#6-cryptographic-security--ed25519-pro-licensing)
+[![i18n](https://img.shields.io/badge/Auto_Region_UI-EN_%7C_TR_%7C_DE_%7C_RU_%7C_ES_%7C_FR-8b5cf6?style=for-the-badge)](#5-auto-region-multi-language-engine-6-languages)
 
-**Zero Cloud Storage Cost • No Receiver App Required • Instant LAN & Global Cloudflare HTTP/2 Tunnel**
+**Zero Cloud Storage Cost • No Receiver App Required • Local Gigabit Wi-Fi & Global Cloudflare HTTP/2 Tunnel**
 
-[🇹🇷 Türkçe Rehber & Tüm Özellikler](#-türkçe-genel-bakış-ve-tüm-özellikler) • [🇬🇧 English Overview & Features](#-english-overview--all-features) • [📥 Download / İndir (Windows x64)](./PeerDrop-v4.1-Windows-x64.zip)
+[📥 **Download Windows x64 Portable (.zip)**](./PeerDrop-v4.1-Windows-x64.zip) • [🚀 **How It Works**](#1-ultra-fast-4k8k-video--100gb-streaming-architecture) • [📊 **Benchmarks & Comparison**](#-why-peerdrop-pro-competitor-comparison)
 
 </div>
 
 ---
 
-## 🇹🇷 Türkçe Genel Bakış ve Tüm Özellikler
+## 🌐 Overview
 
-**PeerDrop Pro v4.1**, telefonlar (Android / iPhone) ve bilgisayarlar arasında **bulut sunucularına tek kuruş ödemeden**, kalite kaybı olmadan **100 GB+ boyutta 4K/8K videoları**, fotoğrafları ve klasörleri doğrudan cihazdan cihaza (P2P) aktaran **kalıcı bir WhatsApp tarzı sohbet ve dosya odasıdır.**
+**PeerDrop Pro v4.1** is a high-performance, self-hosted P2P file streaming engine and persistent WhatsApp-style chat room designed to transfer **uncompressed 4K/8K videos, raw camera footage, and 100GB+ archives** directly between PCs and smartphones (iOS / Android) with **zero cloud storage costs**.
 
-Karşı tarafın telefonuna veya bilgisayarına **hiçbir uygulama kurmasına veya üyelik açmasına gerek yoktur.** WhatsApp veya SMS üzerinden gönderdiğiniz tek bir linke tıklayan alıcı, doğrudan sizin cihazınızla yüksek hızlı şifreli bağlantı kurar.
+**Receivers do not need to install any app or create an account.** Share a single link via WhatsApp/Telegram or scan a QR code—the recipient connects directly to your node through their mobile/desktop browser over local Gigabit LAN or a global Cloudflare HTTP/2 tunnel.
 
 ---
 
-### 🚀 Neden PeerDrop? (Rakiplerle Karşılaştırma Tablosu)
+## 📊 Why PeerDrop Pro? (Competitor Comparison)
 
-| Özellik | ⚡ **PeerDrop Pro v4.1** | **Blip** | **LocalSend** | **SendAnywhere** | **WhatsApp / Telegram** |
+| Feature | ⚡ **PeerDrop Pro v4.1** | **Blip** | **LocalSend** | **SendAnywhere** | **WhatsApp / Telegram** |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Karşı Tarafa Uygulama Kurma Zorunluluğu** | **Yok (Tek Link / QR ile Tarayıcıdan Çalışır)** | Zorunlu (Hesap + App Şart) | Zorunlu | Yok (Reklamlı) | Zorunlu |
-| **Farklı Ağlarda (4.5G / Şehirler Arası) Çalışma** | **Evet (Cloudflare HTTP/2 Küresel Tünel)** | Evet | **Hayır (Sadece Aynı Wi-Fi)** | Evet (Kotalı) | Evet |
-| **Kalıcı Sohbet Odası & Pano (Link/Metin) Akışı** | **Evet (WhatsApp Tarzı Çift Yönlü Oda)** | Hayır | Hayır | Hayır | Evet |
-| **Video Kalite Kaybı & Boyut Sınırı** | **Sıfır Sıkıştırma / Sınırsız (100 GB+)** | Sınırsız | Sınırsız | Ücretsizde Kotalı | **2 GB–4 GB Sınır & Kalite Bozulur** |
-| **Mobil Veri Kota Kalkanı & Wi-Fi Bekletme Kuyruğu** | **Evet (Otomatik Wi-Fi Kuyruğu)** | Hayır | Hayır | Hayır | Hayır |
-| **16 Mbps ADSL ↔ 1000 Mbps Fiber Otomatik Vites** | **Evet (64 KB Pacing ↔ 4 MB Turbo Blok)** | Kısmi | Sabit | Sabit | Sabit |
+| **App Required for Receiver** | **No (Works in Browser via Link/QR)** | Mandatory (App + Account) | Mandatory | No (Ad-heavy) | Mandatory |
+| **Works Across Different Networks (4G/5G / WAN)** | **Yes (Global Cloudflare HTTP/2 Tunnel)** | Yes | **No (Same Wi-Fi Only)** | Yes (Quota Limited) | Yes |
+| **Persistent Two-Way Chat & Clipboard Room** | **Yes (WhatsApp-Style Timeline)** | No | No | No | Yes |
+| **Video Compression & Size Limit** | **Zero Compression / Unlimited (100GB+)** | Unlimited | Unlimited | Limited on Free | **2GB–4GB Limit & Heavy Compression** |
+| **Mobile Data Quota Shield & Wi-Fi Queue** | **Yes (Auto-Queue Until Wi-Fi)** | No | No | No | No |
+| **16 Mbps ADSL ↔ 1000 Mbps Adaptive Pacing** | **Yes (64 KB Paced ↔ 4 MB Turbo Blocks)** | Partial | Static | Static | Static |
 
 ---
 
-### 🎥 1. Süper Hızda Video ve Büyük Dosya Transfer Mimarisi
+## 🔥 Core Engineering Features
 
-Standart web tarayıcıları büyük bir video gönderirken veya indirirken dosyayı önce telefonun RAM belleğinde (`Blob`) biriktirmeye çalışır ve 2–3 GB sonrasında tarayıcı sekmesi çöker. **PeerDrop v4.1** bu engeli **Doğrudan Diske Atomik Yazma (`WriteAt` + `.part` Kalkanı)** mimarisiyle aşar:
+### 1. Ultra-Fast 4K/8K Video & 100GB+ Streaming Architecture
+Standard web browsers crash when transferring multi-gigabyte videos because they attempt to buffer the entire file in RAM (`Blob`). **PeerDrop Pro v4.1** eliminates memory bottlenecks using **Direct Atomic Disk Streaming (`WriteAt` + `.part` Isolation)**:
 
-1. **Sıfır Sıkıştırma (Orijinal 4K/8K Ham Kalite):** Telefon kamerasıyla çekilen yüksek bit hızlı `.mp4` / `.mov` videolar, tek bir pikseli bile sıkıştırılmadan orijinal kalitesiyle saniyeler içinde bilgisayara veya diğer telefona akar.
-2. **`.part` Geçici Dosya Kalkanı (`0 KB` Bozuk Dosya Koruması):** Yüklenen videolar aktarım sırasında `.part` uzantısıyla izole edilir; sadece %100 tamamlanıp **SHA-256 kriptografik özeti** doğrulandığında gerçek dosyaya dönüştürülüp sohbet ekranına düşer.
-3. **Sürükle-Bırak, Yapıştır (`Ctrl+V`) ve Çoklu Seçim:** Bilgisayarda istediğiniz kadar videoyu veya dosyayı doğrudan sohbet ekranına sürükleyip bırakabilir, kopyaladığınız ekran görüntülerini `Ctrl+V` ile yapıştırabilir veya telefondaki **📎 Ataş** ikonundan galerinizdeki videoları toplu seçebilirsiniz.
-4. **Aynı Wi-Fi Ağında Gigabit Hız (50–100+ MB/sn):** Cihazlar aynı modemdeyken (Ev/Ofis Wi-Fi) veriler dış internete çıkmadan yerel ağ üzerinden maksimum donanım hızıyla uçurulur.
+* **100% Lossless Original Quality:** Raw `.mp4`, `.mov`, and `.mkv` 4K/8K videos stream directly to disk without re-encoding or quality loss.
+* **Atomic `.part` Shield (Zero `0 KB` Corrupted Files):** Incoming streams are written to isolated `.part` files and are only promoted to the chat timeline after 100% completion and **end-to-end SHA-256 verification**.
+* **Gigabit Local Wi-Fi Speeds (50–100+ MB/s):** When devices share the same router, traffic bypasses the external internet completely for maximum hardware throughput.
+* **Drag & Drop, Clipboard Paste (`Ctrl+V`), and Multi-File Queue:** Drop multiple videos or files directly into the chat window or paste screenshots instantaneously.
 
 ---
 
-### ⚙️ 2. Evrensel Adaptif Vites Motoru (16 Mbps ADSL ↔ 1000 Mbps Fiber)
+### 2. Universal Adaptive Gear Engine (BBR-Style Anti-Bufferbloat)
+Pushing large packets over a slow connection (such as 16 Mbps ADSL with 0.8 Mbps upload, or weak 2-bar cellular 4G) floods the router's uplink buffer (**Bufferbloat**), causing tunnel disconnects (`Error 1033`) and timeouts.
 
-Her kullanıcının internet altyapısı aynı değildir. 16 Mbps ADSL veya 2 diş çeken zayıf bir 4.5G hattında büyük paketler gönderilirse modemin yükleme kuyruğu şişer (**Bufferbloat**) ve bağlantı kopar. **PeerDrop v4.1**, her parçanın gidiş süresini milisaniye bazında ölçerek paket boyutunu ve nefes alma boşluğunu (**Pacing**) canlı olarak ayarlar:
+**PeerDrop Pro v4.1** measures per-chunk throughput in real time and dynamically adjusts both **chunk size** and **inter-packet pacing delay**:
 
-| Kullanıcının Bağlantı Kalitesi | Ölçülen Anlık Hız | Otomatik Seçilen Vites (Paket Boyutu) | Modem Dinlendirme Boşluğu (Pacing) | Sağladığı Avantaj |
+| Network Condition | Measured Instant Speed | Automatic Gear (Chunk Size) | Anti-Bufferbloat Pacing | Engineering Result |
 | :--- | :--- | :--- | :--- | :--- |
-| **Zayıf 4.5G / 16 Mbps ADSL** | `< 300 KB/sn` | **`[ADSL/4.5G Safe 64KB]`** | **45 ms** | Modemi asla boğmaz, tüneli düşürmez (`Error 1033` önlenir), zaman aşımı vermeden %100 tamamlar. |
-| **Standart VDSL / Normal 4.5G** | `300 KB/sn – 3 MB/sn` | **`[VDSL/4.5G 512KB]`** | **15 ms** | Dosya akarken aynı anda sohbet mesajlarının takılmadan gitmesini sağlar. |
-| **Hızlı Fiber / 5G Mobil** | `3 MB/sn – 15 MB/sn` | **`[Fiber 2MB]`** | **0 ms** | Küresel Cloudflare HTTP/2 tünelini tam kapasiteyle doldurur. |
-| **1000 Mbps Gigabit / Yerel Wi-Fi** | `> 15 MB/sn` | **`[Gigabit Turbo 4MB]`** | **0 ms** | Büyük video dosyalarını saniyeler içinde tam hızda aktarır. |
+| **Weak 4G / 16 Mbps ADSL** | `< 300 KB/s` | **`[ADSL/4.5G Safe 64KB]`** | **45 ms breathe window** | Never chokes the router uplink; zero tunnel drops (`Error 1033` prevented). |
+| **Standard VDSL / 4G LTE** | `300 KB/s – 3 MB/s` | **`[VDSL/4.5G 512KB]`** | **15 ms pacing** | Smooth file transfer while keeping real-time chat messages responsive. |
+| **High-Speed Fiber / 5G** | `3 MB/s – 15 MB/s` | **`[Fiber 2MB]`** | **0 ms** | Maximizes global Cloudflare HTTP/2 tunnel throughput. |
+| **1000 Mbps Gigabit / Local Wi-Fi** | `> 15 MB/s` | **`[Gigabit Turbo 4MB]`** | **0 ms (Full Throttle)** | Transfers multi-gigabyte 4K videos in seconds. |
 
-* **Hareket Sensörlü Zaman Aşımı (Stall-Only Watchdog):** Sabit süre sınırı yoktur. Bağlantı çok yavaş olsa bile veri aktığı sürece aktarım **asla** kesilmez. Sadece hat tamamen kopup 28 saniye boyunca tek bir bayt bile ilerlemezse otomatik olarak kaldığı ofsetten (`Auto-Resume`) yeniden dener.
-
----
-
-### 🛡️ 3. Akıllı Mobil Veri (Kota) Kalkanı ve Wi-Fi Bekletme Kuyruğu
-
-Dışarıda 4.5G/5G mobil veri kullanırken birisi size 40 GB'lık bir video gönderdiğinde yanlışlıkla indirip mobil internet paketinizi bitirmenizi önleyen **3 Kademeli Kota Kalkanı** bulunur:
-
-* **🤖 Akıllı Sor Modu:** Dosya 20 MB'tan büyükse veya cihazınız hücresel verideyse kırmızı **`⚠️ MOBİL VERİ (KOTA) UYARISI!`** penceresi açılır ve harcanacak net GB/MB miktarını gösterir.
-* **⏳ Wi-Fi Ağına Bağlanana Kadar Beklet:** Tek tıkla dosyayı **Wi-Fi Bekleme Kuyruğuna** alabilirsiniz. Mobil verinizden **1 bayt bile harcanmaz**; akşam eve gelip telefonunuz Wi-Fi ağına bağlandığı saniye kuyruktaki tüm videolar otomatik olarak inmeye başlar.
-* **📱 4.5G İzinli Mod:** Acil durumlarda uyarıları atlayarak doğrudan mobil veriden indirmeye izin verir.
+* **Motion-Sensor Watchdog (Stall-Only Timeout):** No rigid fixed timeouts. As long as bytes are moving—even on ultra-slow links—the transfer never aborts. If a network drop freezes traffic for 28 seconds, the engine automatically resumes from the exact byte offset (`Auto-Resume`).
 
 ---
 
-### 📌 4. Sıfır-QR "Kalıcı Giriş" (Otomatik Tünel Bulucu & Error 1033 Kalkanı)
+### 3. Smart Mobile Data Quota Shield & Auto Wi-Fi Queue
+Protects mobile users from accidentally burning through their cellular data plan when someone sends a massive video file:
 
-Ücretsiz küresel tüneller bilgisayar her kapanıp açıldığında güvenlik gereği yeni bir `trycloudflare.com` adresi alır. Her gün yeniden QR kod okutma zahmetini bitirmek için **PeerDrop v4.1** içinde çift katmanlı kurtarıcı bulunur:
-
-1. **Sabit Oda Kimliği (`PD-XXX-XXX`) & MQTT Feneri:** Bilgisayarınızdaki `peerdrop.exe` açıldığı saniyede, o gün aldığı yeni Cloudflare HTTP/2 tünel adresini ve yerel Wi-Fi IP adresini şifreli olarak sabit oda kimliğinize yayınlar.
-2. **Tek Tıkla Kalıcı Giriş Dosyası (`PeerDrop-PD-XXX-XXX.html`):** Üst bardaki **`📌 Kalıcı Giriş`** butonundan telefonunuza indirdiğiniz 3 KB'lık başlatıcıya dokunduğunuzda, bilgisayarınız hangi yeni tünel adresini almış olursa olsun **1 saniye içinde otomatik bulur ve sizi doğrudan sohbet odasına yönlendirir.**
-3. **Canlı Sekme Kurtarıcı:** Sohbet ekranı açıkken tünel yenilenirse tarayıcı `Error 1033` ekranında kalmaz; arka planda yeni tüneli keşfedip sayfayı otomatik olarak yeni adrese taşır.
+* **🤖 Smart Ask Policy:** Automatically detects cellular connections and files larger than `20 MB`, displaying a red **`⚠️ MOBILE DATA QUOTA WARNING!`** with the exact MB/GB cost before downloading.
+* **⏳ Queue Until Connected to Wi-Fi:** With one tap, mobile users can place large videos into the **Wi-Fi Waiting Queue**. Zero cellular data is used—queued files automatically begin downloading the moment the phone connects to a Wi-Fi network.
+* **📱 Allow 4G/5G Override:** Instant bypass for urgent field transfers.
 
 ---
 
-### 🌍 5. Bölgeye Göre Otomatik Değişen 6 Dilli Küresel Arayüz (i18n)
+### 4. Zero-QR "Auto-Pass" Discovery (Anti-Error 1033 Beacon)
+Free quick tunnels change their public URL whenever the host PC restarts. To eliminate rescanning QR codes every day:
 
-Uygulama açıldığı cihazın **saat dilimini (`Intl.DateTimeFormat`)** ve **sistem dilini (`navigator.language`)** otomatik tespit ederek kendi dilinde açılır; ayrıca sağ üstteki dil kutusundan anlık olarak değiştirilebilir:
-* 🇹🇷 **Türkçe** (`Europe/Istanbul`)
+1. **Permanent Room ID (`PD-XXX-XXX`) & Retained MQTT Beacon:** On startup, `peerdrop.exe` publishes its latest Cloudflare HTTP/2 tunnel URL and local LAN IP to a retained discovery topic tied to your Room ID.
+2. **One-Tap Auto-Pass Launcher (`PeerDrop-PD-XXX-XXX.html`):** Download the 3 KB launcher file once via the **`📌 Auto-Pass`** button. Opening it on your phone automatically discovers your PC's newest tunnel URL in 1 second and redirects you straight into the chat room.
+3. **Live Tab Auto-Recovery:** If a tunnel refreshes while the browser tab is open, the client automatically queries the beacon and migrates to the new tunnel URL without showing `Error 1033`.
+
+---
+
+### 5. Auto-Region Multi-Language Engine (6 Languages)
+PeerDrop automatically detects the connecting device's **timezone (`Intl.DateTimeFormat`)** and **browser locale (`navigator.language`)** to launch in the user's native language, with an instant live switcher in the top bar:
 * 🇬🇧 **English** (Global Default)
+* 🇹🇷 **Türkçe** (`Europe/Istanbul`)
 * 🇩🇪 **Deutsch** (`Europe/Berlin`, `Vienna`, `Zurich`)
 * 🇷🇺 **Русский** (`Europe/Moscow`, `Minsk`, `Almaty`)
 * 🇪🇸 **Español** (`Europe/Madrid`, `America/Mexico_City`, `Buenos_Aires`)
@@ -95,37 +94,24 @@ Uygulama açıldığı cihazın **saat dilimini (`Intl.DateTimeFormat`)** ve **s
 
 ---
 
-### 🔐 6. Kriptografik Güvenlik ve Ed25519 Pro Lisanslama
-
-* **Uçtan Uca SHA-256 Doğrulaması:** Gönderilen her video ve dosyanın bit düzeyinde `SHA-256` parmak izi hesaplanır; tek bir bit bile bozulmuşsa sistem bunu anında yakalar.
-* **Ed25519 Dijital İmza Koruması:** Pro lisans anahtarları (`PDPRO-MUSTERI-...`), 64-baytlık eliptik eğri (`crypto/ed25519`) dijital imzasıyla doğrulanır ve taklit edilemez.
-
----
-
-### 🛠️ Hızlı Kurulum ve Video Gönderim Rehberi (30 Saniye)
-
-1. **[PeerDrop-v4.1-Windows-x64.zip](./PeerDrop-v4.1-Windows-x64.zip)** paketini indirin ve masaüstünde bir klasöre çıkarın.
-2. Klasörün içindeki **`peerdrop.exe`** dosyasına çift tıklayın *(Uygulama otomatik olarak donanım öz-denetimini yapar, küresel Cloudflare HTTP/2 tünelini açar ve sohbet penceresini başlatır)*.
-3. Sağ üstteki turuncu **`📱 QR Okut`** butonuna tıklayın:
-   * **Aynı Ev/Ofis İçindeyseniz:** **`📶 Yerel Wi-Fi (Maksimum Hız)`** sekmesindeki QR kodu telefonunuzla okutun.
-   * **Dışarıdaysanız (4.5G / Farklı Şehir):** **`🌍 Küresel (4.5G / Her Yer)`** sekmesindeki QR kodu okutun veya **`🔗 Link Gönder`** butonuyla WhatsApp'tan arkadaşınıza atın.
-4. Telefonunuzda veya bilgisayarınızda **📎 Ataş** ikonuna dokunup istediğiniz boyuttaki videoyu seçin; üstteki canlı hız çubuğundan (`MB/s` ve aktif vites `[...]`) akışı anlık izleyin!
+### 6. Cryptographic Security & Ed25519 Pro Licensing
+* **End-to-End SHA-256 Integrity:** Every transferred file is verified on disk with a cryptographic `SHA-256` hash.
+* **Asymmetric Ed25519 Pro Verification:** Pro licenses (`PDPRO-CUSTOMER-...`) are signed offline using a 64-byte elliptic-curve `Ed25519` private key and verified mathematically inside the binary.
 
 ---
 
-## 🇬🇧 English Overview & All Features
+## 🛠️ Quick Start (30 Seconds)
 
-**PeerDrop Pro v4.1** is a self-hosted, zero-cloud-cost P2P file streaming and persistent WhatsApp-style chat room engineered for **uncompressed 4K/8K videos and 100GB+ files**.
-
-* **Zero App Required for Receivers:** Share a single link via WhatsApp/SMS or scan a QR code. The recipient connects directly to your device via browser over local Gigabit Wi-Fi or a global Cloudflare HTTP/2 tunnel.
-* **Universal Adaptive Gear Engine (64KB ↔ 4MB):** Automatically senses link capacity on every chunk. Uses `64 KB` micro-chunks with `45ms` anti-bufferbloat pacing on weak 16 Mbps ADSL / 4G connections to prevent tunnel drops (`Error 1033`), and scales up to `4 MB` Turbo blocks on Gigabit Wi-Fi.
-* **Smart Mobile Data Quota Shield:** Prevents accidental cellular data exhaustion on large files (`>20 MB`) and lets mobile users queue downloads (`⏳ Queue for Wi-Fi`) until they reconnect to Wi-Fi.
-* **Zero-QR Auto-Pass Beacon:** Remembers your permanent Room ID (`PD-XXX-XXX`) and automatically routes mobile devices to your latest Cloudflare tunnel address after PC restarts.
-* **6-Language Auto-Region UI:** Automatically adapts to Turkish, English, German, Russian, Spanish, or French based on device timezone and locale.
+1. Download **[PeerDrop-v4.1-Windows-x64.zip](./PeerDrop-v4.1-Windows-x64.zip)** and extract it to any folder.
+2. Run **`peerdrop.exe`** *(passes built-in cryptographic self-audit, starts the HTTP/2 tunnel, and opens the desktop app window)*.
+3. Click **`📱 Scan QR`** in the top bar:
+   * **Same Wi-Fi Router:** Select **`📶 Local Wi-Fi (Max Speed)`** and scan with your phone.
+   * **Anywhere (4G/5G / Remote):** Select **`🌍 Global (4G/5G / Anywhere)`** or click **`🔗 Invite Link`** to share via WhatsApp.
+4. Tap the **📎 Paperclip** icon on your phone or drag files into the chat window to start streaming!
 
 ---
 
 <div align="center">
-  <b>Developed by Barbaros Karagülmez (@barbarkaragul-oss)</b><br>
-  <i>High-Performance Systems & P2P Network Engineering</i>
+  <b>Engineered by Barbaros Karagülmez (@barbarkaragul-oss)</b><br>
+  <i>Low-Level Systems & High-Throughput P2P Network Architecture</i>
 </div>
